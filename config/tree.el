@@ -1,0 +1,5 @@
+(setq tr-image-directory "~/emacs/images/tree/")
+(require 'tree-dir)
+(require 'tree-info)
+(require 'tree-imenu)
+(require 'tree-mode-group)

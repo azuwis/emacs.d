@@ -1,0 +1,24 @@
+# $Id: PKGBUILD,v 1.0 2005/01/20 12:02:18 ggrabler Exp $
+# Maintainer:
+# Contributor: Sebastian Sariego B. <segfault@kde.cl>
+
+pkgname=konversation
+pkgver=svn
+pkgrel=1
+pkgdesc="A userfriendly IRC chat client built for KDE."
+url="http://konversation.kde.org/"
+license="GPL"
+depends=('kdelibs' 'x-server' 'subversion')
+
+build() {
+        svn co -N svn://anonsvn.kde.org/home/kde/trunk/extragear/network network 
+        svn co svn://anonsvn.kde.org/home/kde/trunk/KDE/kde-common/admin network/admin 
+        cd network 
+        svn up konversation 
+        make -f Makefile.cvs 
+        ./configure --prefix=/opt/kde 
+        cd konversation 
+        make | return 1
+        make DESTDIR=$startdir/pkg install
+}
+

@@ -1,0 +1,18 @@
+pkgname=
+pkgver=
+pkgrel=1
+pkgdesc=""
+url=""
+license=""
+depends=('')
+conflicts=()
+replaces=()
+backup=()
+install=
+source=($pkgname-$pkgver.tar.gz)
+build() {
+  cd $startdir/src/$pkgname-$pkgver
+  ./configure --prefix=/usr
+  make || return 1
+  make DESTDIR=$startdir/pkg install
+}
