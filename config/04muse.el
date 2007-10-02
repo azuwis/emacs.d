@@ -14,44 +14,44 @@
 
 (unless (assoc "my-html" muse-publishing-styles)
   (muse-derive-style "my-html" "html"
-                     :header "~/muse/templates/my/header.html"
-                     :footer "~/muse/templates/my/footer.html"))
+                     :header "~/git/muse/templates/my/header.html"
+                     :footer "~/git/muse/templates/my/footer.html"))
 
 (unless (assoc "my-journal-html" muse-publishing-styles)
   (muse-derive-style "my-journal-html" "journal-html"
-                     :header "~/muse/templates/my/header.html"
-                     :footer "~/muse/templates/my/footer.html"))
+                     :header "~/git/muse/templates/my/header.html"
+                     :footer "~/git/muse/templates/my/footer.html"))
 
 (unless (assoc "mirror-html" muse-publishing-styles)
   (muse-derive-style "mirror-html" "html"
-                     :header "~/muse/templates/mirror/header.html"
-                     :footer "~/muse/templates/mirror/footer.html"))
+                     :header "~/git/muse/templates/mirror/header.html"
+                     :footer "~/git/muse/templates/mirror/footer.html"))
      
 (setq muse-project-alist
       '(("Website"
-         ("~/muse/draft/my"
+         ("~/git/muse/draft/my"
           :force-publish ("WikiIndex")
           :default "index")
          (:base "my-html" :path "~/public_html")
 	 ;;         (:base "pdf" :path "~/muse/publish/default/pdf")
          )
 
-	("Journal"
-         ("~/muse/draft/journal"
+	("Azuwis' Journal"
+         ("~/git/muse/draft/journal"
           :default "journal")
          (:base "my-journal-html" :path "~/public_html")
 	 (:base "journal-rss" 
-	  :base-url "http://azuwis.googlepages.com/"
+	  :base-url "http://azuwis.frihost.net/"
 	  :path "~/public_html"))
 	
 	("Mirror"
-         ("~/muse/draft/mirror"
+         ("~/git/muse/draft/mirror"
           :force-publish ("WikiIndex")
           :default "WelcomePage")
          (:base "mirror-html" :path "/ssh:mirror.6600.org:/home/azuwis/public_html/website"))
 
         ("WikiPlanner" ;; use value of `planner-project'
-         ("~/muse/draft/plans" ;; where your Planner pages are located
+         ("~/git/muse/draft/plans" ;; where your Planner pages are located
           :force-publish ("WikiIndex")
           :default "PlanIndex" ;; use value of `planner-default-page'
           :major-mode planner-mode
