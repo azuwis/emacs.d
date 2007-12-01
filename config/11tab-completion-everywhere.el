@@ -22,4 +22,5 @@ point."
 (add-hook 'c-mode-hook          'my-tab-fix)
 (add-hook 'sh-mode-hook         'my-tab-fix)
 (add-hook 'emacs-lisp-mode-hook 'my-tab-fix)
+;;(add-hook 'ruby-mode-hook       'my-tab-fix)
 ;; more mode hooks, yada yada, etc ...
