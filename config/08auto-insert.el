@@ -5,7 +5,7 @@
 (setq auto-insert-query nil)
 (add-hook 'find-file-hooks 'auto-insert)
 (load-library "autoinsert")
-(setq auto-insert-directory "~/emacs/auto-insert/")
+(setq auto-insert-directory "~/git/emacs/auto-insert/")
 (setq auto-insert-alist
       (append '(
 		("PKGBUILD" .  "PKGBUILD")

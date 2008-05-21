@@ -3,8 +3,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; add site-lisp/comment load-path
-;(add-to-list 'load-path "~/emacs/site-lisp/common/")
+;; add site-lisp/common load-path
+(add-to-list 'load-path "~/git/emacs/site-lisp/common/")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; misc settings
@@ -12,10 +12,12 @@
 ;; disable message
 ;(setq message-log-max nil)
 ;; set default browser
-(setq browse-url-default-browser "firefox")
+;(setq browse-url-default-browser "firefox")
 ;; no cursor blinking
 ;(if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (blink-cursor-mode 0)
+;;windmove
+(windmove-default-keybindings)
 ;; display time
 ;(display-time)
 ;; 关闭起动时的那个“开机画面”
@@ -43,51 +45,10 @@
 ;; generic-x, make more highlight
 (require 'generic-x)
 
-;; gud display
-;(setq gdb-many-windows t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; backup policies
-(setq make-backup-files t)
-(setq version-control t)
-(setq kept-old-versions 2)
-(setq kept-new-versions 3)
-(setq delete-old-versions t)
-(setq backup-directory-alist '(("" . "~/tmp/emacs")))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; setting for window system
 (if window-system
     (progn
      ;; start here ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-     ;; fontset
-     ;;(create-fontset-from-fontset-spec
-     ;;"-xos4-terminus-medium-r-normal--14-*-*-*-*-*-fontset-my")
-
-     ;(set-fontset-font
-      ;"fontset-default" nil
-      ;"-*-simsun-*-*-*-*-13-*-*-*-*-*-iso10646-1" nil 'prepend)
-     ;(set-fontset-font
-      ;"fontset-my" 'kana
-      ;"-*-simsun-*-*-*-*-13-*-*-*-*-*-iso10646-1" nil 'prepend)
-     ;(set-fontset-font
-      ;"fontset-my" 'han
-      ;"-*-simsun-*-*-*-*-13-*-*-*-*-*-iso10646-1" nil 'prepend)
-     ;(set-fontset-font
-      ;"fontset-my" 'cjk-misc
-      ;"-*-simsun-*-*-*-*-13-*-*-*-*-*-iso10646-1" nil 'prepend)
- 
-     ;;(set-face-font 'default "fontset-my")
-     ;(set-face-font 'tooltip "fontset-my")
-
-      ;; font setting
-      (set-fontset-font "fontset-default"
-			'gb18030 '("Microsoft YaHei" . "unicode-bmp"))
-
-
-     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
      ;; background
      ;(set-face-background 'default "#334455")
      ;(set-face-foreground 'default "wheat")
@@ -98,5 +59,12 @@
      ;; 关闭出错时的提示声
      (setq visible-bell t)
 
+     ;;disable toolbar
+     (tool-bar-mode -1)
+
+     ;;right scroolbar
+     (set-scroll-bar-mode 'right)
+
      ;; end here ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ))
+

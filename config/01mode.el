@@ -15,6 +15,7 @@
 
 (setq auto-mode-alist
       (append '(("PKGBUILD" . sh-mode)
+		("\\.mdwn$" . markdown-mode)
 		) auto-mode-alist))
 
 (add-hook 'c-mode-hook 

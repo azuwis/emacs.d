@@ -29,5 +29,5 @@
 ;; M-x display-line-number-mode-off
 ;; 关闭显示行号的模式
 ;; 仅对某种 mode 启动显示行号的模式
-(add-hook 'c-mode-hook 'display-line-number-mode)
-(add-hook 'c++-mode-hook 'display-line-number-mode)
+;;(add-hook 'c-mode-hook 'display-line-number-mode)
+;;(add-hook 'c++-mode-hook 'display-line-number-mode)
