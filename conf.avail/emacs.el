@@ -1,6 +1,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; load configs from ~/emacs/config
-(mapc 'load (directory-files "~/git/emacs/config/" t "[0-9][0-9].+\.el$"))
+(mapc 'load (directory-files "~/git/emacs/conf.d/" t "^[0-9][0-9].+\.el$"))
 
 ;; (custom-set-variables
 ;;   ;; custom-set-variables was added by Custom.
