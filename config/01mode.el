@@ -14,6 +14,11 @@
 ;; 		) auto-mode-alist))
 
 (setq auto-mode-alist
+      (append '(
+		("\\.CPP$" . c++-mode)
+		) auto-mode-alist))
+
+(setq auto-mode-alist
       (append '(("PKGBUILD" . sh-mode)
 		("\\.mdwn$" . markdown-mode)
 		) auto-mode-alist))
@@ -25,7 +30,7 @@
 
 (add-hook 'c++-mode-hook
 	  '(lambda()
-	     (c-set-style "stroustrup")))
+	     (c-set-style "gnu")))
 	     ;;(c-toggle-auto-hungry-state)))
 
 (add-hook 'python-mode-hook 

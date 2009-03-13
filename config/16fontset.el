@@ -26,7 +26,8 @@
      ;(set-face-font 'tooltip "fontset-my")
 
       ;; font setting
-      (set-default-font "Bitstream Vera Sans Mono-10")
+      (set-default-font "DejaVu Sans Mono-10")
+      ;;(set-default-font "Liberation Mono-10")
       ;;(set-default-font "Monaco-10")
       (set-fontset-font "fontset-default"
 			'gb18030 '("Microsoft YaHei" . "unicode-bmp"))

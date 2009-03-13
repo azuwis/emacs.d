@@ -36,17 +36,21 @@
 (setq frame-title-format "%b @ %f")
 ;; 括号匹配时显示另外一边的括号，而不是烦人的跳到另一个括号
 (show-paren-mode t)
-(setq show-paren-style 'parentheses)
+(setq show-paren-style 'mixed)
 ;; 让 dired 可以递归的拷贝和删除目录
 (setq dired-recursive-copies 'top)
 (setq dired-recursive-deletes 'top)
 ;; use transient mark mode
 (setq transient-mark-mode t)
+;; flyspell
+(setq flyspell-issue-message-flag nil)
 ;; generic-x, make more highlight
 (require 'generic-x)
+;; disable menu bar
+(menu-bar-mode -1)
 
 (if window-system
-    (progn
+     (progn
      ;; start here ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
      ;; background
