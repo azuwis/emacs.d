@@ -1,0 +1,5 @@
+(set-face-foreground 'font-lock-comment-face "#585858")
+(set-face-foreground 'font-lock-string-face "#5fd700")
+(set-face-attribute 'font-lock-type-face nil :foreground "#d75f00" :weight 'bold)
+(set-face-attribute 'font-lock-keyword-face nil :foreground "#d75f00" :weight 'bold)
+(set-face-attribute 'font-lock-preprocessor-face nil :foreground "#767676" :weight 'bold)

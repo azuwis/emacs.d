@@ -1,1 +1,0 @@
-../conf.avail/jungle-color.el

@@ -45,6 +45,8 @@
 ;;;;;; Email
 (setq gnus-secondary-select-methods
       '(
+	;; slashdot..
+	(nnslashdot "")
 	;; local maildir
 	(nnmaildir ""
 		   (directory "~/maildirs/"))
@@ -150,11 +152,14 @@
       gnus-newsgroup-ignored-charsets
       '(unknown-8bit x-unknown iso-8859-1))
 
-;;wrap line when write mail
+;; wrap line when write mail
 (add-hook 'message-mode-hook
-   (lambda ()
-     (setq fill-column 72)
-     (turn-on-auto-fill)))
+	  (lambda ()
+	    (setq fill-column 72)
+	    (turn-on-auto-fill)))
+
+;; check new message every 2 minute
+(gnus-demon-add-handler 'gnus-group-get-new-news 2 nil)
 
 ;; save sent mail
 ;;(setq gnus-message-archive-group

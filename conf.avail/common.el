@@ -12,7 +12,7 @@
 ;; disable message
 ;(setq message-log-max nil)
 ;; set default browser
-;(setq browse-url-default-browser "firefox")
+(setq browse-url-default-browser "firefox")
 ;; no cursor blinking
 ;(if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (blink-cursor-mode 0)
@@ -38,8 +38,8 @@
 (show-paren-mode t)
 (setq show-paren-style 'mixed)
 ;; 让 dired 可以递归的拷贝和删除目录
-(setq dired-recursive-copies 'top)
-(setq dired-recursive-deletes 'top)
+;;(setq dired-recursive-copies 'top)
+;;(setq dired-recursive-deletes 'top)
 ;; use transient mark mode
 (setq transient-mark-mode t)
 ;; flyspell
@@ -54,8 +54,15 @@
      ;; start here ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
      ;; background
-     ;(set-face-background 'default "#334455")
-     ;(set-face-foreground 'default "wheat")
+     ;;(set-face-background 'default "#334455")
+     ;;(set-face-foreground 'default "wheat")
+     (set-face-background 'default "black")
+     (set-face-foreground 'default "#BBBBBB")
+     ;;(setq frame-background-mode 'light)
+
+     ;; transparent in composite X window
+     ;;(set-frame-parameter (selected-frame) 'alpha '(85 50))
+     (add-to-list 'default-frame-alist '(alpha 85 85))
 
      ;; 不在鼠标点击的那个地方插入剪贴板内容
      (setq mouse-yank-at-point t)
@@ -67,7 +74,7 @@
      (tool-bar-mode -1)
 
      ;;right scroolbar
-     (set-scroll-bar-mode 'right)
+     ;;(set-scroll-bar-mode 'right)
 
      ;; end here ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ))
