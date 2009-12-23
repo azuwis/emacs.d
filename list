@@ -1,0 +1,12 @@
+common.el
+mode.el
+ibuffer.el
+key.el
+auto-insert.el
+kill-ring.el
+shebang.el
+backup.el
+smart-compile.el
+org-mode.el
+theme-wombat.el
+yasnippet.el

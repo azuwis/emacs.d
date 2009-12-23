@@ -5,7 +5,7 @@
 (set-face-foreground 'default "#f6f3e8")
 ;(set-background-color "#242424")
 ;(set-foreground-color "#f6f3e8")
-(set-cursor-color "#656565")
+;(set-cursor-color "#454545")
 (set-face-foreground 'font-lock-comment-face "#99968b")
 (set-face-italic-p 'font-lock-comment-face t)
 (set-face-foreground 'font-lock-doc-face "#99968b")
