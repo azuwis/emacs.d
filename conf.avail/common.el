@@ -63,6 +63,9 @@
      ;; transparent in composite X window
      ;;(set-frame-parameter (selected-frame) 'alpha '(85 50))
      (add-to-list 'default-frame-alist '(alpha 85 85))
+     (add-to-list 'default-frame-alist '(width . 120))
+     (add-to-list 'default-frame-alist '(height . 60))
+     (add-to-list 'default-frame-alist '(font . "Consolas-8"))
 
      ;; 不在鼠标点击的那个地方插入剪贴板内容
      (setq mouse-yank-at-point t)
